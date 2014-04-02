@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 /target
+=======
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
+>>>>>>> 55f1bc5431c98300323a24ed2480cc1da79fa14f
