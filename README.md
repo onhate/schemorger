@@ -1,7 +1,7 @@
 schemorger (beta)
 ==========
 
-SchemOrger is a Java Library for generating schema.org hidden html snippets for SEO and Rich Snippets.
+SchemOrger is a Java Library for generating schema.org **hidden html snippets** for SEO and Rich Snippets. It will generate hidden schema.org metatags for your page.
 
 It's really simple to use, like this:
 
