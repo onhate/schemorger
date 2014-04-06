@@ -10,6 +10,12 @@ It's really simple to use, like this:
 Product product = new Product();
 product.setName("simple product schemorger");
 
+// rating
+AggregateRating aggregateRating = new AggregateRating();
+aggregateRating.setRatingValue(4.5);
+aggregateRating.setReviewCount(42);
+product.setAggregateRating(aggregateRating);
+
 // sku
 product.setSku("42");
 
@@ -31,7 +37,6 @@ product.setImage(Link.to("http://placehold.it/300&text=schemorger+product"));
 
 // Offer
 List<Offer> offers = product.buildOffers();
-
 Offer offer = new Offer();
 offer.setPrice(55.00);
 offer.setAvailability(Link.toSchema(Constants.InStock));
@@ -41,25 +46,29 @@ StringBuilder result = SchemaOrgBuilder.build(product);
 
 ```
 
-and voilá, just place it on your page, [Check the RichSnippet Test Tool result](http://www.google.com/webmasters/tools/richsnippets?q=uploaded:8004f665707261df876b1f1ff8977129)
+and voilá, just place it on your page, [Check the RichSnippet Test Tool result](http://www.google.com/webmasters/tools/richsnippets?q=uploaded:8004f665794896136195354d47cb23b4)
 
 
 ```HTML
 <div itemscope itemtype="http://schema.org/Product">
-<meta itemprop="releaseDate" content="2014-04-06T17:16"/>
-<meta itemprop="name" content="simple product schemorger"/>
-<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-<meta itemprop="price" content="55.0"/>
-<link itemprop="availability" href="http://schema.org/InStock"/>
-</div>
-<div itemprop="brand" itemscope itemtype="http://schema.org/Brand">
-<link itemprop="logo" href="http://placehold.it/300&text=schemorger"/>
-<meta itemprop="name" content="Texelz"/>
-<link itemprop="url" href="http://pt.wikipedia.org/wiki/Texelz"/>
-</div>
-<link itemprop="image" href="http://placehold.it/300&text=schemorger+product"/>
-<meta itemprop="sku" content="42"/>
-<link itemprop="url" href="http://www.texelz.com/schemorger"/>
+	<meta itemprop="releaseDate" content="2014-04-06T17:19"/>
+	<meta itemprop="name" content="simple product schemorger"/>
+	<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+		<meta itemprop="price" content="55.0"/>
+		<link itemprop="availability" href="http://schema.org/InStock"/>
+	</div>
+	<div itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+		<link itemprop="logo" href="http://placehold.it/300&text=schemorger"/>
+		<meta itemprop="name" content="Texelz"/>
+		<link itemprop="url" href="http://pt.wikipedia.org/wiki/Texelz"/>
+	</div>
+	<link itemprop="image" href="http://placehold.it/300&text=schemorger+product"/>
+	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+		<meta itemprop="ratingValue" content="4.5"/>
+		<meta itemprop="reviewCount" content="42"/>
+	</div>
+	<meta itemprop="sku" content="42"/>
+	<link itemprop="url" href="http://www.texelz.com/schemorger"/>
 </div>
 ```
 
