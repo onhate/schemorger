@@ -15,46 +15,41 @@ public class Main {
 	public static void main(String[] args) throws IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		Product product = new Product();
-		product.setName("produto 123");
+		product.setName("simple product schemorger");
+
+		// rating
+		AggregateRating aggregateRating = new AggregateRating();
+		aggregateRating.setRatingValue(4.5);
+		aggregateRating.setReviewCount(42);
+		product.setAggregateRating(aggregateRating);
 
 		// sku
-		product.setSku("123");
+		product.setSku("42");
 
 		// releaseDate
 		product.setReleaseDate(new Date());
 
 		// brand
 		Brand brand = new Brand();
-		brand.setName("Brastemp");
-		brand.setUrl(Link.toWiki("Brastemp"));
-		brand.setLogo(Link
-				.to("http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Brastemp_logo.png/200px-Brastemp_logo.png"));
+		brand.setName("Texelz");
+		brand.setUrl(Link.toWiki("Texelz"));
+		brand.setLogo(Link.to("http://placehold.it/300&text=schemorger"));
 		product.setBrand(brand);
 
 		// url
-		product.setUrl(Link.to("http://www.taqi.com.br/p/teste-12312"));
+		product.setUrl(Link.to("http://www.texelz.com/schemorger"));
 
 		// image
-		product.setImage(Link.to("http://greenasathistle.files.wordpress.com/2007/03/microwave.jpg"));
+		product.setImage(Link.to("http://placehold.it/300&text=schemorger+product"));
 
 		// Offer
 		List<Offer> offers = product.buildOffers();
-		// AggregateOffer agOffer = new AggregateOffer();
-		// agOffer.setLowPrice(55.0);
-		// agOffer.setHighPrice(100.0);
-		// agOffer.setOfferCount(2);
-		// offers.add(agOffer);
-
 		Offer offer = new Offer();
 		offer.setPrice(55.00);
 		offer.setAvailability(Link.toSchema(Constants.InStock));
 		offers.add(offer);
 
-		// AggregateRating
-		AggregateRating aggregateRating = product.buildAggregateRating();
-		aggregateRating.setRatingValue(3.5);
-		aggregateRating.setReviewCount(11);
-
-		System.err.println(SchemaOrgBuilder.build(product));
+		StringBuilder result = SchemaOrgBuilder.build(product);
+		System.err.println(result);
 	}
 }
