@@ -19,8 +19,8 @@ public class Main {
 
 		// rating
 		AggregateRating aggregateRating = new AggregateRating();
-		aggregateRating.setRatingValue(4.5);
-		aggregateRating.setReviewCount(42);
+		aggregateRating.setRatingValue("4.5");
+		aggregateRating.setReviewCount(42D);
 		product.setAggregateRating(aggregateRating);
 
 		// sku
