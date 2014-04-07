@@ -2,11 +2,11 @@ package com.texelz.schemorger;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
-import java.util.List;
 
 import com.texelz.schemorger.definition.Link;
 import com.texelz.schemorger.model.AggregateRating;
 import com.texelz.schemorger.model.Brand;
+import com.texelz.schemorger.model.ItemAvailability;
 import com.texelz.schemorger.model.Offer;
 import com.texelz.schemorger.model.Product;
 
@@ -19,8 +19,8 @@ public class Main {
 
 		// rating
 		AggregateRating aggregateRating = new AggregateRating();
-		aggregateRating.setRatingValue(4.5);
-		aggregateRating.setReviewCount(42);
+		aggregateRating.setRatingValue("4.5");
+		aggregateRating.setReviewCount(42.0);
 		product.setAggregateRating(aggregateRating);
 
 		// sku
@@ -43,11 +43,12 @@ public class Main {
 		product.setImage(Link.to("http://placehold.it/300&text=schemorger+product"));
 
 		// Offer
-		List<Offer> offers = product.buildOffers();
 		Offer offer = new Offer();
 		offer.setPrice(55.00);
-		offer.setAvailability(Link.toSchema(Constants.InStock));
-		offers.add(offer);
+		ItemAvailability availability = new ItemAvailability();
+		availability.setSameAs(Link.toSchema(Constants.InStock));
+		offer.setAvailability(availability);
+		product.setOffers(offer);
 
 		StringBuilder result = SchemaOrgBuilder.build(product);
 		System.err.println(result);
