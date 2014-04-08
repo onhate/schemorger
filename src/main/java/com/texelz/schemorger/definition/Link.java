@@ -1,8 +1,9 @@
 package com.texelz.schemorger.definition;
 
 import com.texelz.schemorger.Constants;
+import com.texelz.schemorger.model.Thing;
 
-public class Link {
+public class Link extends Thing {
 
 	public static final Link toSchema(String href) {
 		return new Link(Constants.SCHEMA_ORG + href);

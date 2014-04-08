@@ -20,7 +20,11 @@ public class Main {
 		// rating
 		AggregateRating aggregateRating = new AggregateRating();
 		aggregateRating.setRatingValue("4.5");
+<<<<<<< HEAD
 		aggregateRating.setReviewCount(42.0);
+=======
+		aggregateRating.setReviewCount(42D);
+>>>>>>> 0afd273b7e06466621f002330098e9f9cdedab3e
 		product.setAggregateRating(aggregateRating);
 
 		// sku
