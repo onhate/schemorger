@@ -1,12 +1,14 @@
 package com.texelz.schemorger.model;
 
 /**
- *
- * A process of care relying upon counseling, dialogue, communication, verbalization aimed at improving a mental health condition.
+ * 
+ * A process of care relying upon counseling, dialogue, communication,
+ * verbalization aimed at improving a mental health condition.
+ * 
  * @fullPath Thing > MedicalEntity > MedicalTherapy > PsychologicalTreatment
- *
+ * 
  * @author Texelz (by Onhate)
- *
+ * 
  */
 public class PsychologicalTreatment extends MedicalTherapy {
 

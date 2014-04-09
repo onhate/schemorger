@@ -1,12 +1,13 @@
 package com.texelz.schemorger.model;
 
 /**
- *
+ * 
  * A dry-cleaning business.
- * @fullPath Thing > Organization > LocalBusiness > DryCleaningOrLaundry
- *
+ * 
+ * @fullPath Thing > Place > LocalBusiness > DryCleaningOrLaundry
+ * 
  * @author Texelz (by Onhate)
- *
+ * 
  */
 public class DryCleaningOrLaundry extends LocalBusiness {
 

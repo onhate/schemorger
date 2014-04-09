@@ -1,13 +1,14 @@
 package com.texelz.schemorger.model;
 
 /**
- *
+ * 
  * An auto parts store.
- * @fullPath Thing > Organization > LocalBusiness > Store > AutoPartsStore
- *
+ * 
+ * @fullPath Thing > Place > LocalBusiness > AutomotiveBusiness > AutoPartsStore
+ * 
  * @author Texelz (by Onhate)
- *
+ * 
  */
-public class AutoPartsStore extends Store {
+public class AutoPartsStore extends AutomotiveBusiness {
 
 }

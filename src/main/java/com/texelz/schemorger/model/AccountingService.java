@@ -1,13 +1,15 @@
 package com.texelz.schemorger.model;
 
 /**
- *
+ * 
  * Accountancy business.
- * @fullPath Thing > Organization > LocalBusiness > FinancialService > AccountingService
- *
+ * 
+ * @fullPath Thing > Place > LocalBusiness > ProfessionalService >
+ *           AccountingService
+ * 
  * @author Texelz (by Onhate)
- *
+ * 
  */
-public class AccountingService extends FinancialService {
+public class AccountingService extends ProfessionalService {
 
 }

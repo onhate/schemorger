@@ -131,7 +131,14 @@ public class Clazz {
 			sb.append(";\n");
 			sb.append("\t}\n");
 
-			// setter
+			// getter
+			if (isNotEmpty(prop.getComment())) {
+				sb.append("\t/**\n");
+				sb.append("\t * ");
+				sb.append(prop.getComment().replaceAll("\n", "\n\t * "));
+				sb.append("\n\t */\n");
+			}
+
 			sb.append("\tpublic void set");
 			sb.append(cName);
 			sb.append("(");

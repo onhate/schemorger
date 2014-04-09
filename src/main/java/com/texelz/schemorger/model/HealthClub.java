@@ -1,13 +1,15 @@
 package com.texelz.schemorger.model;
 
 /**
- *
+ * 
  * A health club.
- * @fullPath Thing > Organization > LocalBusiness > SportsActivityLocation > HealthClub
- *
+ * 
+ * @fullPath Thing > Place > LocalBusiness > HealthAndBeautyBusiness >
+ *           HealthClub
+ * 
  * @author Texelz (by Onhate)
- *
+ * 
  */
-public class HealthClub extends SportsActivityLocation {
+public class HealthClub extends HealthAndBeautyBusiness {
 
 }
