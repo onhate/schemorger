@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * A food-related business.

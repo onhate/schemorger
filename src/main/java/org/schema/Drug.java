@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * A chemical or biologic substance, used as a medical therapy, that has a

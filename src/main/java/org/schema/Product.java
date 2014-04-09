@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * A product is anything that is made available for sale—for example, a pair of

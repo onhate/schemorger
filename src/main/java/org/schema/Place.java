@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * Entities that have a somewhat fixed, physical extension.

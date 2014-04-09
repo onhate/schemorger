@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * An organization such as a school, NGO, corporation, club, etc.

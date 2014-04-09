@@ -108,7 +108,7 @@ public class Main {
 		}
 
 		System.err.println(completeName);
-		File baseDir = new File("./src/main/java/com/texelz/schemorger/model");
+		File baseDir = new File("./src/main/java/org/schema");
 		if (!baseDir.exists()) {
 			baseDir.mkdirs();
 		}

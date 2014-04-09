@@ -1,7 +1,5 @@
 package org.schema;
 
-import java.net.URL;
-
 /**
  * 
  * Used to describe a ticket to an event, a flight, a bus ride, etc.
