@@ -3,12 +3,12 @@ package com.texelz.schemorger;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
-import com.texelz.schemorger.definition.Link;
-import com.texelz.schemorger.model.AggregateRating;
-import com.texelz.schemorger.model.Brand;
-import com.texelz.schemorger.model.ItemAvailability;
-import com.texelz.schemorger.model.Offer;
-import com.texelz.schemorger.model.Product;
+import org.schema.AggregateRating;
+import org.schema.Brand;
+import org.schema.ItemAvailability;
+import org.schema.Offer;
+import org.schema.Product;
+import org.schema.base.Link;
 
 public class Main {
 
@@ -19,12 +19,10 @@ public class Main {
 
 		// rating
 		AggregateRating aggregateRating = new AggregateRating();
+		aggregateRating.setBestRating(5);
+		aggregateRating.setWorstRating(1);
 		aggregateRating.setRatingValue("4.5");
-<<<<<<< HEAD
 		aggregateRating.setReviewCount(42.0);
-=======
-		aggregateRating.setReviewCount(42D);
->>>>>>> 0afd273b7e06466621f002330098e9f9cdedab3e
 		product.setAggregateRating(aggregateRating);
 
 		// sku
@@ -50,7 +48,7 @@ public class Main {
 		Offer offer = new Offer();
 		offer.setPrice(55.00);
 		ItemAvailability availability = new ItemAvailability();
-		availability.setSameAs(Link.toSchema(Constants.InStock));
+		availability.setUrl(Link.toSchema(Constants.InStock));
 		offer.setAvailability(availability);
 		product.setOffers(offer);
 

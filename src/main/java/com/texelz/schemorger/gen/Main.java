@@ -93,7 +93,7 @@ public class Main {
 					pType = "java.util.Date";
 					break;
 				case "URL":
-					pType = "com.texelz.schemorger.definition.Link";
+					pType = "org.schema.base.Link";
 					break;
 				case "Number":
 				case "Float":

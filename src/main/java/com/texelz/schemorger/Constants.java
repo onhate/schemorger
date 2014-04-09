@@ -8,6 +8,5 @@ public abstract class Constants {
 	// Schema Link URLs
 	public static final String InStock = "InStock";
 	public static final String OutOfStock = "OutOfStock";
-	public static final String xxx = "OutOfStock";
 
 }

@@ -18,7 +18,7 @@ import java.util.Set;
  * 
  */
 public class Clazz {
-	private String extend = "com.texelz.schemorger.definition.Scoped";
+	private String extend = "org.schema.base.Scoped";
 	private String name;
 	private String comment;
 	private Set<Property> properties;
@@ -76,7 +76,7 @@ public class Clazz {
 	public String build() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("package com.texelz.schemorger.model;\n\n");
+		sb.append("package org.schema;\n\n");
 
 		sb.append("/**\n");
 		sb.append(" *\n");
@@ -131,7 +131,14 @@ public class Clazz {
 			sb.append(";\n");
 			sb.append("\t}\n");
 
-			// setter
+			// getter
+			if (isNotEmpty(prop.getComment())) {
+				sb.append("\t/**\n");
+				sb.append("\t * ");
+				sb.append(prop.getComment().replaceAll("\n", "\n\t * "));
+				sb.append("\n\t */\n");
+			}
+
 			sb.append("\tpublic void set");
 			sb.append(cName);
 			sb.append("(");

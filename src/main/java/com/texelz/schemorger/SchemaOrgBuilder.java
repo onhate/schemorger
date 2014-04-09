@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.commons.beanutils.PropertyUtils;
-
-import com.texelz.schemorger.definition.Link;
-import com.texelz.schemorger.definition.Scoped;
+import org.schema.Enumeration;
+import org.schema.base.Link;
+import org.schema.base.Scoped;
 
 public class SchemaOrgBuilder {
 
@@ -30,8 +30,14 @@ public class SchemaOrgBuilder {
 		if (value != null) {
 			String content = null;
 
-			if (value instanceof Scoped) { // SCOPED
-				build(name, (Scoped) value, out);
+			if (value instanceof Enumeration) { // ENUMERATION
+				Enumeration e = (Enumeration) value;
+				Link url = e.getUrl();
+				if (url != null) {
+					build(name, url, out);
+				} else {
+					build(name, e.getName(), out);
+				}
 			} else if (value instanceof Collection) { // COLLECTION
 				for (Object e : (Collection<?>) value)
 					build(name, e, out);
@@ -41,6 +47,8 @@ public class SchemaOrgBuilder {
 				content = LINK.replace("{name}", name).replace("{value}", ((Link) value).getHref());
 			} else if (value instanceof Date) { // date
 				content = PROPERTY.replace("{name}", name).replace("{value}", DATE_FORMAT.format(value));
+			} else if (value instanceof Scoped) { // SCOPED
+				build(name, (Scoped) value, out);
 			} else { // DEFAULT
 				content = PROPERTY.replace("{name}", name).replace("{value}", value.toString());
 			}

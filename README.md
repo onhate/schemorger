@@ -72,7 +72,7 @@ and voilá, just place it on your page, [Check the RichSnippet Test Tool result]
 </div>
 ```
 
-All objects in package ```com.texelz.schemorger.model``` are based on [schema.org schemas](http://schema.org/docs/full.html)
+All objects in package ```org.schema``` are based on [schema.org schemas](http://schema.org/docs/full.html)
 
 
 P.S.:
