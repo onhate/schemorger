@@ -16,7 +16,7 @@ public class AlignmentObject extends Intangible {
 	private String educationalFramework;
 	private String targetDescription;
 	private String targetName;
-	private org.schema.base.Link targetUrl;
+	private org.schema.base.URL targetUrl;
 
 	/**
 	 * A category of alignment between the learning resource and the framework
@@ -83,14 +83,14 @@ public class AlignmentObject extends Intangible {
 	/**
 	 * The URL of a node in an established educational framework.
 	 */
-	public org.schema.base.Link getTargetUrl() {
+	public org.schema.base.URL getTargetUrl() {
 		return this.targetUrl;
 	}
 
 	/**
 	 * The URL of a node in an established educational framework.
 	 */
-	public void setTargetUrl(org.schema.base.Link targetUrl) {
+	public void setTargetUrl(org.schema.base.URL targetUrl) {
 		this.targetUrl = targetUrl;
 	}
 }

@@ -11,8 +11,8 @@ import java.util.Map.Entry;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.schema.Enumeration;
-import org.schema.base.Link;
-import org.schema.base.Scoped;
+import org.schema.Thing;
+import org.schema.base.URL;
 
 public class SchemaOrgBuilder {
 
@@ -32,7 +32,7 @@ public class SchemaOrgBuilder {
 
 			if (value instanceof Enumeration) { // ENUMERATION
 				Enumeration e = (Enumeration) value;
-				Link url = e.getUrl();
+				URL url = e.getUrl();
 				if (url != null) {
 					build(name, url, out);
 				} else {
@@ -43,12 +43,12 @@ public class SchemaOrgBuilder {
 					build(name, e, out);
 			} else if (value.getClass().isArray()) { // ARRAY
 				build(name, Arrays.asList(value), out);
-			} else if (value instanceof Link) { // LINK
-				content = LINK.replace("{name}", name).replace("{value}", ((Link) value).getHref());
+			} else if (value instanceof URL) { // LINK
+				content = LINK.replace("{name}", name).replace("{value}", ((URL) value).getHref());
 			} else if (value instanceof Date) { // date
 				content = PROPERTY.replace("{name}", name).replace("{value}", DATE_FORMAT.format(value));
-			} else if (value instanceof Scoped) { // SCOPED
-				build(name, (Scoped) value, out);
+			} else if (value instanceof Thing) { // SCOPED
+				build(name, (Thing) value, out);
 			} else { // DEFAULT
 				content = PROPERTY.replace("{name}", name).replace("{value}", value.toString());
 			}
@@ -59,7 +59,7 @@ public class SchemaOrgBuilder {
 		}
 	}
 
-	protected static void build(String name, Scoped scoped, StringBuilder out) throws IllegalAccessException,
+	protected static void build(String name, Thing thing, StringBuilder out) throws IllegalAccessException,
 			InvocationTargetException, NoSuchMethodException {
 		// start
 		String header = null;
@@ -68,11 +68,11 @@ public class SchemaOrgBuilder {
 		} else {
 			header = ITEM_START;
 		}
-		header = header.replace("{itemtype}", scoped.getClass().getSimpleName());
+		header = header.replace("{itemtype}", thing.getClass().getSimpleName());
 		out.append(header);
 
 		// the properties
-		Map<String, Object> map = PropertyUtils.describe(scoped);
+		Map<String, Object> map = PropertyUtils.describe(thing);
 		Iterator<Entry<String, Object>> it = map.entrySet().iterator();
 		while (it.hasNext()) {
 			Entry<String, Object> e = it.next();
@@ -87,10 +87,10 @@ public class SchemaOrgBuilder {
 		out.append(ITEM_END);
 	}
 
-	public static StringBuilder build(Scoped scoped) throws IllegalAccessException, InvocationTargetException,
+	public static StringBuilder build(Thing thing) throws IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		StringBuilder out = new StringBuilder();
-		build(null, scoped, out);
+		build(null, thing, out);
 		return out;
 	}
 }

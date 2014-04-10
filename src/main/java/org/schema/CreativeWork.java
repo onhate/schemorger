@@ -37,7 +37,7 @@ public class CreativeWork extends Thing {
 	private java.util.Date dateCreated;
 	private java.util.Date dateModified;
 	private java.util.Date datePublished;
-	private org.schema.base.Link discussionUrl;
+	private org.schema.base.URL discussionUrl;
 	private Person editor;
 	private AlignmentObject educationalAlignment;
 	private String educationalUse;
@@ -47,7 +47,7 @@ public class CreativeWork extends Thing {
 	private String inLanguage;
 	private String interactionCount;
 	private String interactivityType;
-	private org.schema.base.Link isBasedOnUrl;
+	private org.schema.base.URL isBasedOnUrl;
 	private Boolean isFamilyFriendly;
 	private String keywords;
 	private String learningResourceType;
@@ -55,11 +55,11 @@ public class CreativeWork extends Thing {
 	private Offer offers;
 	private Object provider;
 	private Organization publisher;
-	private org.schema.base.Link publishingPrinciples;
+	private org.schema.base.URL publishingPrinciples;
 	private Review review;
 	private Organization sourceOrganization;
 	private String text;
-	private org.schema.base.Link thumbnailUrl;
+	private org.schema.base.URL thumbnailUrl;
 	private Duration timeRequired;
 	private String typicalAgeRange;
 	private Double version;
@@ -500,14 +500,14 @@ public class CreativeWork extends Thing {
 	/**
 	 * A link to the page containing the comments of the CreativeWork.
 	 */
-	public org.schema.base.Link getDiscussionUrl() {
+	public org.schema.base.URL getDiscussionUrl() {
 		return this.discussionUrl;
 	}
 
 	/**
 	 * A link to the page containing the comments of the CreativeWork.
 	 */
-	public void setDiscussionUrl(org.schema.base.Link discussionUrl) {
+	public void setDiscussionUrl(org.schema.base.URL discussionUrl) {
 		this.discussionUrl = discussionUrl;
 	}
 
@@ -656,7 +656,7 @@ public class CreativeWork extends Thing {
 	 * be repeated for multiple sources. For example,
 	 * http://example.com/great-multiplication-intro.html
 	 */
-	public org.schema.base.Link getIsBasedOnUrl() {
+	public org.schema.base.URL getIsBasedOnUrl() {
 		return this.isBasedOnUrl;
 	}
 
@@ -665,7 +665,7 @@ public class CreativeWork extends Thing {
 	 * be repeated for multiple sources. For example,
 	 * http://example.com/great-multiplication-intro.html
 	 */
-	public void setIsBasedOnUrl(org.schema.base.Link isBasedOnUrl) {
+	public void setIsBasedOnUrl(org.schema.base.URL isBasedOnUrl) {
 		this.isBasedOnUrl = isBasedOnUrl;
 	}
 
@@ -784,18 +784,18 @@ public class CreativeWork extends Thing {
 	}
 
 	/**
-	 * Link to page describing the editorial principles of the organization
+	 * URL to page describing the editorial principles of the organization
 	 * primarily responsible for the creation of the CreativeWork.
 	 */
-	public org.schema.base.Link getPublishingPrinciples() {
+	public org.schema.base.URL getPublishingPrinciples() {
 		return this.publishingPrinciples;
 	}
 
 	/**
-	 * Link to page describing the editorial principles of the organization
+	 * URL to page describing the editorial principles of the organization
 	 * primarily responsible for the creation of the CreativeWork.
 	 */
-	public void setPublishingPrinciples(org.schema.base.Link publishingPrinciples) {
+	public void setPublishingPrinciples(org.schema.base.URL publishingPrinciples) {
 		this.publishingPrinciples = publishingPrinciples;
 	}
 
@@ -844,14 +844,14 @@ public class CreativeWork extends Thing {
 	/**
 	 * A thumbnail image relevant to the Thing.
 	 */
-	public org.schema.base.Link getThumbnailUrl() {
+	public org.schema.base.URL getThumbnailUrl() {
 		return this.thumbnailUrl;
 	}
 
 	/**
 	 * A thumbnail image relevant to the Thing.
 	 */
-	public void setThumbnailUrl(org.schema.base.Link thumbnailUrl) {
+	public void setThumbnailUrl(org.schema.base.URL thumbnailUrl) {
 		this.thumbnailUrl = thumbnailUrl;
 	}
 

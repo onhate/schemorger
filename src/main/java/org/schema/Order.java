@@ -29,7 +29,7 @@ public class Order extends Intangible {
 	private java.util.Date paymentDue;
 	private PaymentMethod paymentMethod;
 	private String paymentMethodId;
-	private org.schema.base.Link paymentUrl;
+	private org.schema.base.URL paymentUrl;
 
 	/**
 	 * The offer(s) -- e.g., product, quantity and price combinations --
@@ -282,14 +282,14 @@ public class Order extends Intangible {
 	/**
 	 * The URL for sending a payment.
 	 */
-	public org.schema.base.Link getPaymentUrl() {
+	public org.schema.base.URL getPaymentUrl() {
 		return this.paymentUrl;
 	}
 
 	/**
 	 * The URL for sending a payment.
 	 */
-	public void setPaymentUrl(org.schema.base.Link paymentUrl) {
+	public void setPaymentUrl(org.schema.base.URL paymentUrl) {
 		this.paymentUrl = paymentUrl;
 	}
 }

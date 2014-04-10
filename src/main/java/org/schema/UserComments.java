@@ -15,7 +15,7 @@ public class UserComments extends UserInteraction {
 	private java.util.Date commentTime;
 	private Object creator;
 	private CreativeWork discusses;
-	private org.schema.base.Link replyToUrl;
+	private org.schema.base.URL replyToUrl;
 
 	/**
 	 * The text of the UserComment.
@@ -84,14 +84,14 @@ public class UserComments extends UserInteraction {
 	/**
 	 * The URL at which a reply may be posted to the specified UserComment.
 	 */
-	public org.schema.base.Link getReplyToUrl() {
+	public org.schema.base.URL getReplyToUrl() {
 		return this.replyToUrl;
 	}
 
 	/**
 	 * The URL at which a reply may be posted to the specified UserComment.
 	 */
-	public void setReplyToUrl(org.schema.base.Link replyToUrl) {
+	public void setReplyToUrl(org.schema.base.URL replyToUrl) {
 		this.replyToUrl = replyToUrl;
 	}
 }

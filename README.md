@@ -12,8 +12,10 @@ product.setName("simple product schemorger");
 
 // rating
 AggregateRating aggregateRating = new AggregateRating();
-aggregateRating.setRatingValue(4.5);
-aggregateRating.setReviewCount(42);
+aggregateRating.setBestRating(5);
+aggregateRating.setWorstRating(1);
+aggregateRating.setRatingValue("4.5");
+aggregateRating.setReviewCount(42.0);
 product.setAggregateRating(aggregateRating);
 
 // sku
@@ -36,14 +38,14 @@ product.setUrl(Link.to("http://www.texelz.com/schemorger"));
 product.setImage(Link.to("http://placehold.it/300&text=schemorger+product"));
 
 // Offer
-List<Offer> offers = product.buildOffers();
 Offer offer = new Offer();
 offer.setPrice(55.00);
-offer.setAvailability(Link.toSchema(Constants.InStock));
-offers.add(offer);
+ItemAvailability availability = new ItemAvailability();
+availability.setUrl(Link.toSchema(Constants.InStock));
+offer.setAvailability(availability);
+product.setOffers(offer);
 
 StringBuilder result = SchemaOrgBuilder.build(product);
-
 ```
 
 and voilá, just place it on your page, [Check the RichSnippet Test Tool result](http://www.google.com/webmasters/tools/richsnippets?q=uploaded:8004f665794896136195354d47cb23b4)

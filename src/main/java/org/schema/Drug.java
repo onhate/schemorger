@@ -26,7 +26,7 @@ public class Drug extends MedicalTherapy {
 	private Drug interactingDrug;
 	private Boolean isAvailableGenerically;
 	private Boolean isProprietary;
-	private org.schema.base.Link labelDetails;
+	private org.schema.base.URL labelDetails;
 	private DrugLegalStatus legalStatus;
 	private Organization manufacturer;
 	private String mechanismOfAction;
@@ -34,7 +34,7 @@ public class Drug extends MedicalTherapy {
 	private String overdosage;
 	private DrugPregnancyCategory pregnancyCategory;
 	private String pregnancyWarning;
-	private org.schema.base.Link prescribingInfo;
+	private org.schema.base.URL prescribingInfo;
 	private DrugPrescriptionStatus prescriptionStatus;
 	private Drug relatedDrug;
 	private Object warning;
@@ -256,16 +256,16 @@ public class Drug extends MedicalTherapy {
 	}
 
 	/**
-	 * Link to the drug's label details.
+	 * URL to the drug's label details.
 	 */
-	public org.schema.base.Link getLabelDetails() {
+	public org.schema.base.URL getLabelDetails() {
 		return this.labelDetails;
 	}
 
 	/**
-	 * Link to the drug's label details.
+	 * URL to the drug's label details.
 	 */
-	public void setLabelDetails(org.schema.base.Link labelDetails) {
+	public void setLabelDetails(org.schema.base.URL labelDetails) {
 		this.labelDetails = labelDetails;
 	}
 
@@ -376,16 +376,16 @@ public class Drug extends MedicalTherapy {
 	}
 
 	/**
-	 * Link to prescribing information for the drug.
+	 * URL to prescribing information for the drug.
 	 */
-	public org.schema.base.Link getPrescribingInfo() {
+	public org.schema.base.URL getPrescribingInfo() {
 		return this.prescribingInfo;
 	}
 
 	/**
-	 * Link to prescribing information for the drug.
+	 * URL to prescribing information for the drug.
 	 */
-	public void setPrescribingInfo(org.schema.base.Link prescribingInfo) {
+	public void setPrescribingInfo(org.schema.base.URL prescribingInfo) {
 		this.prescribingInfo = prescribingInfo;
 	}
 

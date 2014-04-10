@@ -21,7 +21,7 @@ public class Place extends Thing {
 	private String interactionCount;
 	private String isicV4;
 	private Object logo;
-	private org.schema.base.Link map;
+	private org.schema.base.URL map;
 	private OpeningHoursSpecification openingHoursSpecification;
 	private Object photo;
 	private Review review;
@@ -202,14 +202,14 @@ public class Place extends Thing {
 	/**
 	 * A URL to a map of the place. Supercedes <a href="maps">maps</a>.
 	 */
-	public org.schema.base.Link getMap() {
+	public org.schema.base.URL getMap() {
 		return this.map;
 	}
 
 	/**
 	 * A URL to a map of the place. Supercedes <a href="maps">maps</a>.
 	 */
-	public void setMap(org.schema.base.Link map) {
+	public void setMap(org.schema.base.URL map) {
 		this.map = map;
 	}
 

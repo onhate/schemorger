@@ -22,7 +22,7 @@ public class ParcelDelivery extends Intangible {
 	private PostalAddress originAddress;
 	private Order partOfOrder;
 	private String trackingNumber;
-	private org.schema.base.Link trackingUrl;
+	private org.schema.base.URL trackingUrl;
 
 	/**
 	 * The party responsible for the parcel delivery.
@@ -175,14 +175,14 @@ public class ParcelDelivery extends Intangible {
 	/**
 	 * Tracking url for the parcel delivery.
 	 */
-	public org.schema.base.Link getTrackingUrl() {
+	public org.schema.base.URL getTrackingUrl() {
 		return this.trackingUrl;
 	}
 
 	/**
 	 * Tracking url for the parcel delivery.
 	 */
-	public void setTrackingUrl(org.schema.base.Link trackingUrl) {
+	public void setTrackingUrl(org.schema.base.URL trackingUrl) {
 		this.trackingUrl = trackingUrl;
 	}
 }

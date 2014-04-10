@@ -19,7 +19,7 @@ public class ServiceChannel extends Intangible {
 	private ContactPoint servicePhone;
 	private PostalAddress servicePostalAddress;
 	private ContactPoint serviceSmsNumber;
-	private org.schema.base.Link serviceUrl;
+	private org.schema.base.URL serviceUrl;
 
 	/**
 	 * A language someone may use with the item.
@@ -124,14 +124,14 @@ public class ServiceChannel extends Intangible {
 	/**
 	 * The website to access the service.
 	 */
-	public org.schema.base.Link getServiceUrl() {
+	public org.schema.base.URL getServiceUrl() {
 		return this.serviceUrl;
 	}
 
 	/**
 	 * The website to access the service.
 	 */
-	public void setServiceUrl(org.schema.base.Link serviceUrl) {
+	public void setServiceUrl(org.schema.base.URL serviceUrl) {
 		this.serviceUrl = serviceUrl;
 	}
 }

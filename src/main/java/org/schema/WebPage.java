@@ -20,9 +20,9 @@ public class WebPage extends CreativeWork {
 	private java.util.Date lastReviewed;
 	private WebPageElement mainContentOfPage;
 	private ImageObject primaryImageOfPage;
-	private org.schema.base.Link relatedLink;
+	private org.schema.base.URL relatedLink;
 	private Object reviewedBy;
-	private org.schema.base.Link significantLink;
+	private org.schema.base.URL significantLink;
 	private Specialty specialty;
 
 	/**
@@ -102,14 +102,14 @@ public class WebPage extends CreativeWork {
 	/**
 	 * A link related to this web page, for example to other related web pages.
 	 */
-	public org.schema.base.Link getRelatedLink() {
+	public org.schema.base.URL getRelatedLink() {
 		return this.relatedLink;
 	}
 
 	/**
 	 * A link related to this web page, for example to other related web pages.
 	 */
-	public void setRelatedLink(org.schema.base.Link relatedLink) {
+	public void setRelatedLink(org.schema.base.URL relatedLink) {
 		this.relatedLink = relatedLink;
 	}
 
@@ -140,7 +140,7 @@ public class WebPage extends CreativeWork {
 	 * non-navigation links that are clicked on the most. Supercedes <a
 	 * href="significantLinks">significantLinks</a>.
 	 */
-	public org.schema.base.Link getSignificantLink() {
+	public org.schema.base.URL getSignificantLink() {
 		return this.significantLink;
 	}
 
@@ -149,7 +149,7 @@ public class WebPage extends CreativeWork {
 	 * non-navigation links that are clicked on the most. Supercedes <a
 	 * href="significantLinks">significantLinks</a>.
 	 */
-	public void setSignificantLink(org.schema.base.Link significantLink) {
+	public void setSignificantLink(org.schema.base.URL significantLink) {
 		this.significantLink = significantLink;
 	}
 

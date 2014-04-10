@@ -16,7 +16,7 @@ import org.jsoup.select.Elements;
  * @author onhate
  * 
  */
-public class Main {
+public class SchemaOrgModelGenerator {
 
 	public static void main(String[] args) throws IOException {
 		Document doc = Jsoup.connect("http://schema.org/docs/full.html").get();

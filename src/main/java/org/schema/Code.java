@@ -12,25 +12,25 @@ package org.schema;
  */
 public class Code extends CreativeWork {
 
-	private org.schema.base.Link codeRepository;
+	private org.schema.base.URL codeRepository;
 	private Thing programmingLanguage;
 	private String runtime;
 	private String sampleType;
 	private SoftwareApplication targetProduct;
 
 	/**
-	 * Link to the repository where the un-compiled, human readable code and
+	 * URL to the repository where the un-compiled, human readable code and
 	 * related code is located (SVN, github, CodePlex)
 	 */
-	public org.schema.base.Link getCodeRepository() {
+	public org.schema.base.URL getCodeRepository() {
 		return this.codeRepository;
 	}
 
 	/**
-	 * Link to the repository where the un-compiled, human readable code and
+	 * URL to the repository where the un-compiled, human readable code and
 	 * related code is located (SVN, github, CodePlex)
 	 */
-	public void setCodeRepository(org.schema.base.Link codeRepository) {
+	public void setCodeRepository(org.schema.base.URL codeRepository) {
 		this.codeRepository = codeRepository;
 	}
 

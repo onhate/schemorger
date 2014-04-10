@@ -17,11 +17,11 @@ public class SoftwareApplication extends CreativeWork {
 	private String countriesNotSupported;
 	private String countriesSupported;
 	private String device;
-	private org.schema.base.Link downloadUrl;
+	private org.schema.base.URL downloadUrl;
 	private Object featureList;
 	private String fileFormat;
 	private Integer fileSize;
-	private org.schema.base.Link installUrl;
+	private org.schema.base.URL installUrl;
 	private Object memoryRequirements;
 	private String operatingSystem;
 	private String permissions;
@@ -139,14 +139,14 @@ public class SoftwareApplication extends CreativeWork {
 	/**
 	 * If the file can be downloaded, URL to download the binary.
 	 */
-	public org.schema.base.Link getDownloadUrl() {
+	public org.schema.base.URL getDownloadUrl() {
 		return this.downloadUrl;
 	}
 
 	/**
 	 * If the file can be downloaded, URL to download the binary.
 	 */
-	public void setDownloadUrl(org.schema.base.Link downloadUrl) {
+	public void setDownloadUrl(org.schema.base.URL downloadUrl) {
 		this.downloadUrl = downloadUrl;
 	}
 
@@ -206,7 +206,7 @@ public class SoftwareApplication extends CreativeWork {
 	 * URL at which the app may be installed, if different from the URL of the
 	 * item.
 	 */
-	public org.schema.base.Link getInstallUrl() {
+	public org.schema.base.URL getInstallUrl() {
 		return this.installUrl;
 	}
 
@@ -214,7 +214,7 @@ public class SoftwareApplication extends CreativeWork {
 	 * URL at which the app may be installed, if different from the URL of the
 	 * item.
 	 */
-	public void setInstallUrl(org.schema.base.Link installUrl) {
+	public void setInstallUrl(org.schema.base.URL installUrl) {
 		this.installUrl = installUrl;
 	}
 

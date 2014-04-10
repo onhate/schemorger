@@ -9,15 +9,15 @@ package org.schema;
  * @author Texelz (by Onhate)
  * 
  */
-public class Thing extends org.schema.base.Scoped {
+public class Thing {
 
-	private org.schema.base.Link additionalType;
+	private org.schema.base.URL additionalType;
 	private String alternateName;
 	private String description;
-	private org.schema.base.Link image;
+	private org.schema.base.URL image;
 	private String name;
-	private org.schema.base.Link sameAs;
-	private org.schema.base.Link url;
+	private org.schema.base.URL sameAs;
+	private org.schema.base.URL url;
 
 	/**
 	 * An additional type for the item, typically used for adding more specific
@@ -27,7 +27,7 @@ public class Thing extends org.schema.base.Scoped {
 	 * attribute - for multiple types. Schema.org tools may have only weaker
 	 * understanding of extra types, in particular those defined externally.
 	 */
-	public org.schema.base.Link getAdditionalType() {
+	public org.schema.base.URL getAdditionalType() {
 		return this.additionalType;
 	}
 
@@ -39,7 +39,7 @@ public class Thing extends org.schema.base.Scoped {
 	 * attribute - for multiple types. Schema.org tools may have only weaker
 	 * understanding of extra types, in particular those defined externally.
 	 */
-	public void setAdditionalType(org.schema.base.Link additionalType) {
+	public void setAdditionalType(org.schema.base.URL additionalType) {
 		this.additionalType = additionalType;
 	}
 
@@ -74,14 +74,14 @@ public class Thing extends org.schema.base.Scoped {
 	/**
 	 * URL of an image of the item.
 	 */
-	public org.schema.base.Link getImage() {
+	public org.schema.base.URL getImage() {
 		return this.image;
 	}
 
 	/**
 	 * URL of an image of the item.
 	 */
-	public void setImage(org.schema.base.Link image) {
+	public void setImage(org.schema.base.URL image) {
 		this.image = image;
 	}
 
@@ -104,7 +104,7 @@ public class Thing extends org.schema.base.Scoped {
 	 * identity. E.g. the URL of the item's Wikipedia page, Freebase page, or
 	 * official website.
 	 */
-	public org.schema.base.Link getSameAs() {
+	public org.schema.base.URL getSameAs() {
 		return this.sameAs;
 	}
 
@@ -113,21 +113,21 @@ public class Thing extends org.schema.base.Scoped {
 	 * identity. E.g. the URL of the item's Wikipedia page, Freebase page, or
 	 * official website.
 	 */
-	public void setSameAs(org.schema.base.Link sameAs) {
+	public void setSameAs(org.schema.base.URL sameAs) {
 		this.sameAs = sameAs;
 	}
 
 	/**
 	 * URL of the item.
 	 */
-	public org.schema.base.Link getUrl() {
+	public org.schema.base.URL getUrl() {
 		return this.url;
 	}
 
 	/**
 	 * URL of the item.
 	 */
-	public void setUrl(org.schema.base.Link url) {
+	public void setUrl(org.schema.base.URL url) {
 		this.url = url;
 	}
 }

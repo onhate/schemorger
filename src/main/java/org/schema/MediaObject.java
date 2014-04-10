@@ -17,9 +17,9 @@ public class MediaObject extends CreativeWork {
 	private NewsArticle associatedArticle;
 	private String bitrate;
 	private String contentSize;
-	private org.schema.base.Link contentUrl;
+	private org.schema.base.URL contentUrl;
 	private Duration duration;
-	private org.schema.base.Link embedUrl;
+	private org.schema.base.URL embedUrl;
 	private CreativeWork encodesCreativeWork;
 	private String encodingFormat;
 	private java.util.Date expires;
@@ -80,7 +80,7 @@ public class MediaObject extends CreativeWork {
 	 * Actual bytes of the media object, for example the image file or video
 	 * file. (previous spelling: contentURL)
 	 */
-	public org.schema.base.Link getContentUrl() {
+	public org.schema.base.URL getContentUrl() {
 		return this.contentUrl;
 	}
 
@@ -88,7 +88,7 @@ public class MediaObject extends CreativeWork {
 	 * Actual bytes of the media object, for example the image file or video
 	 * file. (previous spelling: contentURL)
 	 */
-	public void setContentUrl(org.schema.base.Link contentUrl) {
+	public void setContentUrl(org.schema.base.URL contentUrl) {
 		this.contentUrl = contentUrl;
 	}
 
@@ -114,7 +114,7 @@ public class MediaObject extends CreativeWork {
 	 * and should not be the same as the content of the <code>loc</code> tag.
 	 * (previous spelling: embedURL)
 	 */
-	public org.schema.base.Link getEmbedUrl() {
+	public org.schema.base.URL getEmbedUrl() {
 		return this.embedUrl;
 	}
 
@@ -124,7 +124,7 @@ public class MediaObject extends CreativeWork {
 	 * and should not be the same as the content of the <code>loc</code> tag.
 	 * (previous spelling: embedURL)
 	 */
-	public void setEmbedUrl(org.schema.base.Link embedUrl) {
+	public void setEmbedUrl(org.schema.base.URL embedUrl) {
 		this.embedUrl = embedUrl;
 	}
 
